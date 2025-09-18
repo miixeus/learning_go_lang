@@ -1,0 +1,16 @@
+Comandos Go no Terminal
+
+---------------------------------------------------------------------------------------------------------------------------
+
+         ________________> nome do arquivo, ou pasta para rodar
+$ go run main.go
+
+$ go get .... ________> url do pacote para baixar
+
+$ go tidy __________> remove pacote instalado
+
+$ go cd ../ __________> retorna pasta
+
+
+        ________________> nome da pasta para acessar
+$ go cd operadores        

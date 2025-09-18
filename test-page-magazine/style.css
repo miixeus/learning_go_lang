@@ -1,0 +1,160 @@
+/* Reset Básico e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Container da Revista */
+.book-container {
+    position: relative;
+    width: 80%;
+    height: 80vh;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+}
+
+.book {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-right: 5px solid #f4f4f4;
+    transition: background-color 0.3s ease;
+}
+
+.page:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+
+.page h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.page p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Controles de Navegação */
+.controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    z-index: 10;
+}
+
+.control-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.control-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.control-btn:focus {
+    outline: none;
+}
+
+/* Barra de Navegação */
+.navigation-bar {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.page-link {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.page-link:hover {
+    background-color: #555;
+}
+
+.page-link:focus {
+    outline: none;
+}
+
+/* Media Queries para Responsividade */
+@media screen and (max-width: 768px) {
+    .book-container {
+        width: 100%;
+        height: 70vh;
+    }
+
+    .page h1 {
+        font-size: 2em;
+    }
+
+    .page p {
+        font-size: 1em;
+    }
+
+    .control-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}

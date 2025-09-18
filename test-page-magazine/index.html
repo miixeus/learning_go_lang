@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Revista Digital</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Container da Revista -->
+    <div class="book-container">
+        <div class="book">
+            <div class="page" id="page1">
+                <h1>Página 1</h1>
+                <p>Conteúdo da primeira página. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="page" id="page2">
+                <h1>Página 2</h1>
+                <p>Conteúdo da segunda página. Curabitur hendrerit felis ac arcu tempor, at mollis arcu placerat.</p>
+            </div>
+            <div class="page" id="page3">
+                <h1>Página 3</h1>
+                <p>Conteúdo da terceira página. Fusce ut magna vel augue egestas ultrices.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controles de Navegação -->
+    <div class="controls">
+        <button id="prev" class="control-btn"><i class="fas fa-chevron-left"></i></button>
+        <button id="next" class="control-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Barra de navegação (com links para cada página) -->
+    <div class="navigation-bar">
+        <button class="page-link" data-page="0">Página 1</button>
+        <button class="page-link" data-page="1">Página 2</button>
+        <button class="page-link" data-page="2">Página 3</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
